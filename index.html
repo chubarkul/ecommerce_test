@@ -17,6 +17,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3GMXT6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+  <script>
+    const cartButton = document.querySelector('.cart');
+    const popup = document.querySelector('.popup');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    // Open the popup when clicking on the cart button
+    cartButton.addEventListener('click', function() {
+      popup.style.display = 'block';
+    });
+    
+    // Close the popup when clicking on the close button
+    closeBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+  </script>
   
   <header class="header">
     <button class="logo" onclick="JavaScript:alert('Logo')">
