@@ -13,11 +13,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
   </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3GMXT6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
+<!-- Start of header element with cart and logo -->      
   <header class="header">
     <button class="logo" onclick="JavaScript:alert('Logo')">
     <img width="80" height="40" src="logo.png" alt="logo">
@@ -26,14 +27,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <img width="60" height="50" src="cart.png" alt="cart">
     </button>
   </header>
-  
+<!-- End of header element with cart and logo -->      
+
+<!-- Start of pop up element -->      
   <div class="popup">
     <span class="close-btn">&times;</span>
-    <h2>Popup Title</h2>
-    <p>This is a sample text inside the popup.</p>
+    <h2>Cart</h2>
+    <p>Your cart is empty</p>
     <button class="purchase-btn">Purchase</button>
   </div>
+<!-- End of pop up element -->   
   
+<!-- Start of product grid -->    
 <div class="product-container">
     
   <div class="product">
@@ -71,7 +76,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="purchase-btn">Purchase</button>
   </div>
 </div>
+<!-- End of product grid -->    
   
+<!-- Start of cart pop up script -->  
 <script>
     const cartButton = document.querySelector('.cart');
     const popup = document.querySelector('.popup');
@@ -87,5 +94,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       popup.style.display = 'none';
     });
   </script>
+<!-- End of cart pop up script-->
+  
 </body>
 </html>
