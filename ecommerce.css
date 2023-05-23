@@ -10,9 +10,10 @@
     
     .logo {
       margin-right: 10px;
+      cursor: pointer;
     }
     
-    .icon {
+    .cart {
       cursor: pointer;
     }
      body {
