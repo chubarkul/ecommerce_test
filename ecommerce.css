@@ -1,6 +1,6 @@
 <style>
     .product-container {
-      display: inline-flex;
+      display: flex;
     }
     .product {
       
