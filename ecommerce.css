@@ -1,7 +1,6 @@
 <style>
     .product-container {
-      display: flex;
-       flex-direction: row;
+      display: inline-grid;
     }
     
     .product {
