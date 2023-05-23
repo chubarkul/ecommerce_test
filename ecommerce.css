@@ -9,14 +9,10 @@
     }
     
     .logo {
-      width: 50px;
-      height: 50px;
       margin-right: 10px;
     }
     
     .icon {
-      width: 20px;
-      height: 20px;
       cursor: pointer;
     }
      body {
