@@ -3,7 +3,9 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px;
-      background-color: #f2f2f2;
+      background-color: #f5f5f5;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     
     .logo {
@@ -23,6 +25,10 @@
     }
     .product-container {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     .product {
       width: 200px;
