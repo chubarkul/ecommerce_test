@@ -42,3 +42,39 @@
       object-fit: cover;
       margin-bottom: 10px;
     }
+     
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      z-index: 9999;
+    }
+    
+    .popup h2 {
+      margin-top: 0;
+    }
+    
+    .popup .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+    
+    .popup .purchase-btn {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
