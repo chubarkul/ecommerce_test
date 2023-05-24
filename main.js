@@ -15,22 +15,26 @@
 <!-- End of cart pop up script-->
   
 <!-- Start of add to cart btn -->
-  // Get the add-cart-btn button element
-const addButton = document.querySelector('.add-cart-btn');
+// Get all add-cart-btn button elements
+const addButtons = document.querySelectorAll('.add-cart-btn');
 
-// Add click event listener to the button
-addButton.addEventListener('click', function() {
-  // Get the product title from the h2 tag
-  const productTitle = document.querySelector('.product h2').innerText;
-  
-  // Get the popup element
-  const popup = document.querySelector('.popup');
-  
-  // Set the product title as the content of the popup
-  const popupContent = document.querySelector('#popup-content');
-  popupContent.innerText = productTitle;
-  
-  // Show the popup
-  popup.style.display = 'block';
-}); 
+// Loop through each add-cart-btn button
+addButtons.forEach(function(button) {
+  // Add click event listener to the button
+  button.addEventListener('click', function() {
+    // Get the product title from the h2 tag within the parent product div
+    const productTitle = this.parentNode.querySelector('h2').innerText;
+
+    // Get the popup element
+    const popup = document.querySelector('.popup');
+
+    // Set the product title as the content of the popup
+    const popupContent = document.querySelector('#popup-content');
+    popupContent.innerText = productTitle;
+
+    // Show the popup
+    popup.style.display = 'block';
+  });
+});
+
 <!-- End of add to cart btn -->
