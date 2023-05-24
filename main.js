@@ -17,10 +17,6 @@
 <!-- Start of add to cart btn -->
 // Get all add-cart-btn button elements
 const addButtons = document.querySelectorAll('.add-cart-btn');
-
-// Get the popup element
-const popup = document.querySelector('.popup');
-
 // Add click event listener to each add-cart-btn button
 addButtons.forEach(function(button) {
   button.addEventListener('click', function() {
