@@ -16,10 +16,10 @@
   
 <!-- Start of add to cart btn -->
 // Get all add-cart-btn button elements
-const addButtons = document.querySelectorAll('.add-cart-btn');
+    const addButtons = document.querySelectorAll('.add-cart-btn');
 // Add click event listener to each add-cart-btn button
-addButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
+    addButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
     // Get the product title from the h2 tag within the parent product div
     const productTitle = this.parentNode.querySelector('h2').innerText;
 
@@ -27,14 +27,24 @@ addButtons.forEach(function(button) {
     const newParagraph = document.createElement('p');
     newParagraph.innerText = productTitle;
 
-    // Append the product title to the popup's content
+    // Create a new remove button element
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'Remove';
+
+    // Add click event listener to the remove button
+    removeButton.addEventListener('click', function() {
+      // Remove the corresponding product entry from the popup
+      newParagraph.remove();
+      removeButton.remove();
+    });
+
+    // Append the product title and remove button to the popup's content
     const popupContent = document.querySelector('#popup-content');
     popupContent.appendChild(newParagraph);
+    popupContent.appendChild(removeButton);
 
     // Show the popup
     popup.style.display = 'block';
   });
 });
-
-
 <!-- End of add to cart btn -->
