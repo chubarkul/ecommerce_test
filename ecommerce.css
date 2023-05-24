@@ -81,7 +81,7 @@
     }
      .back-btn {
      position: fixed;
-     top: 10px;
-     left: 10px;
+     margin-top: 50px;
+     margin-left: 50px;
      }
 
