@@ -14,6 +14,10 @@
     });
 <!-- End of cart pop up script-->
   
+function goBack() {
+  window.history.back();
+}
+
 <!-- Start of add to cart btn -->
 // Get all add-cart-btn button elements
     const addButtons = document.querySelectorAll('.add-cart-btn');
