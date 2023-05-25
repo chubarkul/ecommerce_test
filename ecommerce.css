@@ -95,4 +95,5 @@
             border: 1px solid #ccc;
             text-align: center;
             display: none; /* Hide by default */
+            z-index: 2;
         }
