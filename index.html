@@ -40,6 +40,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="purchase-btn">Purchase</button>
   </div>
 <!-- End of pop up element -->   
+  <div id="popup-purchase" class="popup-purchase">
+        <h3>Thank you for your purchase</h3>
+        <button onclick="closePopup()">Close</button>
+    </div>
   
 <!-- Start of product grid -->    
 <div class="product-container">
@@ -50,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Price: $19.99</p>
     <button class="view-btn" onclick="window.location.href='product_1.html';">View</button>
     <button class="add-cart-btn">Add to cart</button>
-    <button class="purchase-btn">Purchase</button>
+    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
   </div>
   
   <div class="product">
@@ -59,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Price: $29.99</p>
     <button class="view-btn" onclick="window.location.href='product_2.html';">View</button>
     <button class="add-cart-btn">Add to cart</button>
-    <button class="purchase-btn">Purchase</button>
+    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
   </div>
   
   <div class="product">
@@ -68,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Price: $39.99</p>
     <button class="view-btn" onclick="window.location.href='product_3.html';">View</button>
     <button class="add-cart-btn">Add to cart</button>
-    <button class="purchase-btn">Purchase</button>
+    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
   </div>
   <div class="product">
     <img class="product-img" src="placeholder.png" alt="Product 4">
@@ -76,7 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Price: $49.99</p>
     <button class="view-btn" onclick="window.location.href='product_4.html';">View</button>
     <button class="add-cart-btn">Add to cart</button>
-    <button class="purchase-btn">Purchase</button>
+    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
   </div>
 </div>
 <!-- End of product grid -->    
