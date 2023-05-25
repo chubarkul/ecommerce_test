@@ -52,3 +52,17 @@ function goBack() {
   });
 });
 <!-- End of add to cart btn -->
+
+<!-- Start of purchae pop up -->
+
+function openPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block"; // Показываем pop-up
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none"; // Скрываем pop-up
+        }
+<!-- End of purchae pop up -->
+
