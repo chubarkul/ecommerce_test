@@ -56,12 +56,12 @@ function goBack() {
 <!-- Start of purchae pop up -->
 
 function openPopup() {
-            var popup = document.getElementById("popup");
+            var popup = document.getElementById("popup-purchase");
             popup.style.display = "block"; // Показываем pop-up
         }
 
         function closePopup() {
-            var popup = document.getElementById("popup");
+            var popup = document.getElementById("popup-purchase");
             popup.style.display = "none"; // Скрываем pop-up
         }
 <!-- End of purchae pop up -->
