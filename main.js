@@ -80,7 +80,8 @@ function openPopup() {
             ]
         }
     }
-});
+}); 
+}
 
         function closePopup() {
             var popup = document.getElementById("popup-purchase");
