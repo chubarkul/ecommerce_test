@@ -60,20 +60,27 @@ function openPopup() {
             popup.style.display = "block"; // Показываем pop-up
                 
     // dataLayer.push для purchase
-    window.dataLayer.push({
+    dataLayer.push({
     "ecommerce": {
         "currencyCode": "RUB",
-        "purchase" : {
-            "id": "43521",
-                    "name": "Yandex bag",
-                    "price": 654.32,
+        "purchase": {
+            "actionField": {
+                "id" : "TRX987"
+            },
+            "products": [
+                {
+                    "id": "25314",
+                    "name": "Yandex women's hoodie",
+                    "price": 1543.62,
                     "brand": "Yandex / Яndex",
-                    "category": "Accessories/Bags",
+                    "category": "Clothing/Women's clothing/Hoodies and sweatshirts",
+                    "variant": "White",
                     "quantity": 1
+                }
+            ]
         }
     }
 });
-        }
 
         function closePopup() {
             var popup = document.getElementById("popup-purchase");
