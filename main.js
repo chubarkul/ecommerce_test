@@ -50,6 +50,23 @@ function goBack() {
     // Show the popup
     popup.style.display = 'block';
   });
+        dataLayer.push({
+    "ecommerce": {
+        "currencyCode": "RUB",    
+        "add": {
+            "products": [
+                {
+                    "id": "43521",
+                    "name": "Yandex bag",
+                    "price": 654.32,
+                    "brand": "Yandex / Яndex",
+                    "category": "Accessories/Bags",
+                    "quantity": 1
+                }
+            ]
+        }
+    }
+});
 });
 <!-- End of add to cart btn -->
 
