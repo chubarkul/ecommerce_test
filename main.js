@@ -53,6 +53,9 @@ function goBack() {
     "ecommerce": {
         "currencyCode": "RUB",    
         "add": {
+            "actionField": {
+                "list" : "Product add"
+            },
             "products": [
                 {
                     "id": "43521",
