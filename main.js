@@ -67,7 +67,8 @@ function goBack() {
                 }
             ]
         }
-    }
+    },
+            "event": "Product add event"
 });
   });
         
