@@ -49,7 +49,6 @@ function goBack() {
 
     // Show the popup
     popup.style.display = 'block';
-  });
         dataLayer.push({
     "ecommerce": {
         "currencyCode": "RUB",    
@@ -67,6 +66,8 @@ function goBack() {
         }
     }
 });
+  });
+        
 });
 <!-- End of add to cart btn -->
 
