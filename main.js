@@ -82,27 +82,15 @@ function openPopup() {
             popup.style.display = "block"; // Показываем pop-up
                 
     // dataLayer.push для purchase
-    dataLayer.push({
-    "ecommerce": {
-        "currencyCode": "RUB",
-        "purchase": {
-            "actionField": {
-                "id" : "TRX987"
-            },
-            "products": [
-                {
-                    "id": "25314",
-                    "name": "Yandex women's hoodie",
-                    "price": 1543.62,
-                    "brand": "Yandex / Яndex",
-                    "category": "Clothing/Women's clothing/Hoodies and sweatshirts",
-                    "variant": "White",
-                    "quantity": 1
-                }
-            ]
-        }
-    }
-}); 
+    yaCounter93687385.ecommercePurchase({
+        'id': 777777,
+        'currency': 'RUB',
+        "goods": [{
+      'id': 12345,
+      'name': 'First of two',
+      'price': 123,
+      'quantity': 1
+}]
 }
 
         function closePopup() {
