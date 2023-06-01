@@ -91,7 +91,7 @@ function openPopup() {
       'price': 123,
       'quantity': 1
 }]
-}
+})
 
         function closePopup() {
             var popup = document.getElementById("popup-purchase");
