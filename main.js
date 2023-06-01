@@ -91,12 +91,12 @@ function openPopup() {
       'price': 123,
       'quantity': 1
 }]
-})
+});
 
         function closePopup() {
             var popup = document.getElementById("popup-purchase");
             popup.style.display = "none"; // Скрываем pop-up
-        }
+        };
 
 <!-- End of purchae pop up -->
 
