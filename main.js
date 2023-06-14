@@ -53,7 +53,7 @@ addButtons.forEach(function(button) {
     dataLayer.push({
       "ecommerce": {
         "currencyCode": "RUB",    
-        "cart_cart": {
+        "test": {
           "actionField": {
             "list": "Product add"
           },
@@ -69,7 +69,7 @@ addButtons.forEach(function(button) {
           ]
         }
       },
-      "event": "Product add event"
+      "event": "cart_cart"
     });
   });
 });
