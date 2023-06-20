@@ -81,7 +81,7 @@ function openPopup() {
   popup.style.display = "block"; // Show the pop-up
                 
   // dataLayer.push for purchase
-  "event", "purchase", {
+   dataLayer.push({"event", "purchase", {
     transaction_id: "T_12345",
     value: 25.42,
     tax: 4.90,
