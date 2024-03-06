@@ -26,6 +26,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         ecommerce:"dataLayer"
    });
 </script>
+
+    <script>
+    document.getElementById("email").addEventListener("input", function() {
+        ym(93687385, 'reachGoal', 'emailEntered', {
+            "email": this.value
+        });
+    });
+
+    document.getElementById("phone").addEventListener("input", function() {
+        ym(93687385, 'reachGoal', 'phoneNumberEntered', {
+            "phone_number": this.value
+        });
+    });
+</script>
 <noscript><div><img src="https://mc.yandex.ru/watch/93687385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="main.js" defer></script>
