@@ -25,22 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         webvisor:true,
         ecommerce:"dataLayer"
    }); </script>
-<script>
-    document.getElementById("email").addEventListener("input", function() {
-        var emailValue = this.value;
-        updateFirstPartyParams({ "email": emailValue });
-    });
 
-    document.getElementById("phone").addEventListener("input", function() {
-        var phoneValue = this.value;
-        updateFirstPartyParams({ "phone_number": phoneValue });
-    });
-
-    // Функция для обновления параметров firstPartyParams
-    function updateFirstPartyParams(params) {
-        ym(93687385, 'firstPartyParams', params);
-    }
-</script>
 <noscript><div><img src="https://mc.yandex.ru/watch/93687385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="main.js" defer></script>
@@ -129,6 +114,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <input type="submit" value="Submit">
 </form>
+<script>
+    document.getElementById("email").addEventListener("input", function() {
+        var emailValue = this.value;
+        updateFirstPartyParams({ "email": emailValue });
+    });
 
+    document.getElementById("phone").addEventListener("input", function() {
+        var phoneValue = this.value;
+        updateFirstPartyParams({ "phone_number": phoneValue });
+    });
+
+    // Функция для обновления параметров firstPartyParams
+    function updateFirstPartyParams(params) {
+        ym(93687385, 'firstPartyParams', params);
+    }
+</script>
 </body>
 </html>
