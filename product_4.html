@@ -115,20 +115,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="submit" value="Submit">
 </form>
 <script>
-    document.getElementById("email").addEventListener("input", function() {
-        var emailValue = this.value;
-        updateFirstPartyParams({ "email": emailValue });
-    });
+        function updateFirstPartyParams(params) {
+            ym(93687385, 'firstPartyParams', params);
+        }
 
-    document.getElementById("phone").addEventListener("input", function() {
-        var phoneValue = this.value;
-        updateFirstPartyParams({ "phone_number": phoneValue });
-    });
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("email").addEventListener("blur", function() {
+                var emailValue = this.value;
+                updateFirstPartyParams({ "email": emailValue });
+            });
 
-    // Функция для обновления параметров firstPartyParams
-    function updateFirstPartyParams(params) {
-        ym(93687385, 'firstPartyParams', params);
-    }
-</script>
+            document.getElementById("phone").addEventListener("blur", function() {
+                var phoneValue = this.value;
+                updateFirstPartyParams({ "phone_number": phoneValue });
+            });
+        });
+    </script>
 </body>
 </html>
