@@ -82,7 +82,7 @@ function openPopup() {
                 
   // dataLayer.push for purchase
   gtag("event", "view_item", {
-currency: ”KZT",
+currency: "KZT",
 items: [
 {
 item_id: "SKU_12345",
