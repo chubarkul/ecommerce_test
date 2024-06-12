@@ -9,6 +9,11 @@
     background-color: rgba(0,0,0,0.5);
     overflow: auto;
 }
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
 .product {
     display: inline-block; /* Поместите продукты в ряд */
     margin: 10px; /* Добавьте немного отступа между продуктами */
