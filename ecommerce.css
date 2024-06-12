@@ -9,6 +9,13 @@
     background-color: rgba(0,0,0,0.5);
     overflow: auto;
 }
+.product {
+    display: inline-block; /* Поместите продукты в ряд */
+    margin: 10px; /* Добавьте немного отступа между продуктами */
+    padding: 10px; /* Добавьте отступ внутри продуктов */
+    border: 1px solid #ccc; /* Добавьте обводку к фону продуктов */
+    border-radius: 10px; /* Округлите углы */
+}
 
 .modal-content {
     background-color: #fefefe;
