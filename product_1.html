@@ -38,12 +38,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, 500); // Задержка для анимации
     }
 
-    function addToCart(productName) {
+function addToCartAndShowModal(productName) {
     // Push the 'add_to_cart' event to the dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'add_to_cart',
-        'title': productName
+        'product_name': productName
     });
 
     // Call showModal function to display the modal
@@ -67,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="product" id="product3">
     <h2>Product 3</h2>
-    <button onclick="showModal('Product 3')">Add to cart</button>
+    <button onclick="addToCartAndShowModal('Product 3')">Add to cart</button>
     <div id="random_id">Random content 3</div>
 </div>
 
