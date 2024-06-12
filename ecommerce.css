@@ -12,6 +12,9 @@
 .centered-image {
     display: block;
     margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 20%; /* Adjust as needed */
 }
 
 .product {
