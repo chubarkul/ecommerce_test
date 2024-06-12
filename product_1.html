@@ -24,19 +24,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
     function showModal(productName) {
-        document.querySelector('.modal-content h2').textContent = 'Добавлено в корзину: ' + productName;
-        document.getElementById('modalContainer').style.display = 'block';
-        setTimeout(function() {
-            document.getElementById('modalContainer').style.opacity = '1';
-        }, 50); // Задержка для анимации
-    }
+    document.querySelector('.modal-content h2').textContent = 'Добавлено в корзину: ' + productName;
+    document.getElementById('modalContainer').style.display = 'block';
+    // Уберите следующие две строки, которые отвечают за анимацию
+    // setTimeout(function() {
+    //     document.getElementById('modalContainer').style.opacity = '1';
+    // }, 50); // Задержка для анимации
+}
 
-    function closeModal() {
-        document.getElementById('modalContainer').style.opacity = '0';
-        setTimeout(function() {
-            document.getElementById('modalContainer').style.display = 'none';
-        }, 500); // Задержка для анимации
-    }
+function closeModal() {
+    // Уберите следующие две строки, которые отвечают за анимацию
+    // document.getElementById('modalContainer').style.opacity = '0';
+    // setTimeout(function() {
+        document.getElementById('modalContainer').style.display = 'none';
+    // }, 500); // Задержка для анимации
+}
 </script>
 
 <div class="product" id="product1">
