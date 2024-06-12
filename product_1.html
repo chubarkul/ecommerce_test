@@ -22,6 +22,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<script>
+    function showModal(productName) {
+        document.querySelector('.modal-content h2').textContent = 'Добавлено в корзину: ' + productName;
+        document.getElementById('modalContainer').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('modalContainer').style.opacity = '1';
+        }, 50); // Задержка для анимации
+    }
+
+    function closeModal() {
+        document.getElementById('modalContainer').style.opacity = '0';
+        setTimeout(function() {
+            document.getElementById('modalContainer').style.display = 'none';
+        }, 500); // Задержка для анимации
+    }
+</script>
+
 <div class="product" id="product1">
     <h2>Продукт 1</h2>
     <button onclick="showModal('Продукт 1')">Add to cart</button>
@@ -46,23 +63,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button onclick="closeModal()">OK</button>
     </div>
 </div>
-
-<script>
-    function showModal(productName) {
-        document.querySelector('.modal-content h2').textContent = 'Добавлено в корзину: ' + productName;
-        document.getElementById('modalContainer').style.display = 'block';
-        setTimeout(function() {
-            document.getElementById('modalContainer').style.opacity = '1';
-        }, 50); // Задержка для анимации
-    }
-
-    function closeModal() {
-        document.getElementById('modalContainer').style.opacity = '0';
-        setTimeout(function() {
-            document.getElementById('modalContainer').style.display = 'none';
-        }, 500); // Задержка для анимации
-    }
-</script>
 
 </body>
 </html>
