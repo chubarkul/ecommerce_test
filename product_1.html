@@ -24,11 +24,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
     function showModal(productName) {
-        document.querySelector('.modal-content h2').textContent = 'Добавлено в корзину: ' + productName;
+        document.querySelector('.modal-content h2').textContent = 'Added to cart: ' + productName;
         document.getElementById('modalContainer').style.display = 'block';
         setTimeout(function() {
             document.getElementById('modalContainer').style.opacity = '1';
-        }, 50); // Задержка для анимации
+        }, 50); 
     }
 
     function closeModal() {
@@ -62,7 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <h2>Modal Title</h2>
-        <p>Modal content goes here.</p>
+        <p>Random modal content.</p>
         <img src="https://m.media-amazon.com/images/I/61tjXtiFc5L.jpg" alt="Product Image" class="centered-image">
         <button onclick="closeModal()">OK</button>
     </div>
