@@ -14,7 +14,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <script src="main.js" defer></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'item_view',
+  'ecommerce': {
+    'items': [{
+      'item_name': 'Product Name',     // Название товара
+      'item_id': '12345',              // ID товара
+      'price': '199.99',               // Цена товара
+      'quantity': 1,                   // Количество товара
+      'item_category': 'Electronics',  // Категория товара
+      'item_brand': 'Brand Name',      // Бренд товара
+      'item_variant': 'Black',         // Вариант товара
+      'currency': 'USD'                // Валюта
+    }]
+  }
+});
 
+</script>
   </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
