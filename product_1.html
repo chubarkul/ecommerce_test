@@ -96,7 +96,7 @@ window.dataLayer.push({
             type: 'script',
             url: 'https://mc.yads.tech/int.js',
             async: true,
-            content: `(function(m,e,t,r,i,k,a){
+            content: (function(m,e,t,r,i,k,a){
                 m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                 m[i].l=1*new Date();
                 for (var j = 0; j < document.scripts.length; j++) {
@@ -114,7 +114,7 @@ window.dataLayer.push({
                 trackLinks: true,
                 accurateTrackBounce: true,
                 ecommerce: "dataLayer"
-            });`
+            });
         },
         {
             type: 'img',
