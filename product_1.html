@@ -40,41 +40,10 @@ window.dataLayer.push({
         const currentTag = tags;
         currentTag.forEach((tag) => {
             const { type } = tag;
-            if (type === 'script') {
-                scriptBuilder(doc, tag);
-            }
-            if (type === 'img') {
-                imgBuilder(doc, tag);
-            }
             if (type === 'iframe') {
                 iframeBuilder(doc, tag);
             }
         });
-        
-        function scriptBuilder(doc, tag) {
-            const { url, async, content } = tag;
-            const element = doc.createElement('script');
-            if (url) {
-                element.src = url;
-            }
-            if (async) {
-                element.async = true;
-            }
-            if (content) {
-                element.textContent = content;
-            }
-            doc.body.appendChild(element);
-        }
-        
-        function imgBuilder(doc, tag) {
-            const { url, width, height } = tag;
-            const element = doc.createElement('img');
-            element.src = url;
-            element.width = width || 1;
-            element.height = height || 1;
-            element.style.display = 'none';
-            doc.body.appendChild(element);
-        }
         
         function iframeBuilder(doc, tag) {
             const { url, sandbox, referrerpolicy, width, height } = tag;
@@ -93,32 +62,42 @@ window.dataLayer.push({
         }
     })(document, [
         {
-            type: 'script',
-            url: 'https://mc.yads.tech/int.js',
-            async: true,
-            content: (function(m,e,t,r,i,k,a){
-                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                m[i].l=1*new Date();
-                for (var j = 0; j < document.scripts.length; j++) {
-                    if (document.scripts[j].src === r) { return; }
-                }
-                k=e.createElement(t),
-                a=e.getElementsByTagName(t)[0],
-                k.async=1,
-                k.src=r,
-                a.parentNode.insertBefore(k,a)
-            })(window, document, "script", "https://mc.yads.tech/int.js", "ym");
+            type: 'iframe',
+            url: 'data:text/html;charset=utf-8,' + encodeURIComponent(`
+                <!DOCTYPE html>
+                <html lang="ru">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Yandex Metrika</title>
+                </head>
+                <body>
+                    <!-- Встраиваемый аналитический скрипт -->
+                    <script src="https://mc.yads.tech/int.js" async></script>
+                    <script>
+                        (function(m,e,t,r,i,k,a){
+                            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                            m[i].l=1*new Date();
+                            k=e.createElement(t),
+                            a=e.getElementsByTagName(t)[0],
+                            k.async=1,
+                            k.src=r,
+                            a.parentNode.insertBefore(k,a)
+                        })(window, document, "script", "https://mc.yads.tech/int.js", "ym");
 
-            ym(98052698, "init", {
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                ecommerce: "dataLayer"
-            });
-        },
-        {
-            type: 'img',
-            url: 'https://mc.yandex.ru/watch/98052698',
+                        ym(98052698, "init", {
+                            clickmap: true,
+                            trackLinks: true,
+                            accurateTrackBounce: true,
+                            ecommerce: "dataLayer"
+                        });
+                    </script>
+                    <!-- Скрытое изображение для отслеживания -->
+                    <img src="https://mc.yandex.ru/watch/98052698" style="display:none" width="1" height="1" alt="" />
+                </body>
+                </html>
+            `),
+            sandbox: ['allow-scripts'],
+            referrerpolicy: 'no-referrer',
             width: 1,
             height: 1
         }
