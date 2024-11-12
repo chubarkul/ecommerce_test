@@ -35,96 +35,95 @@ window.dataLayer.push({
 </script>
   </head>
 <body>
-<script>
+    <script>
     ((doc, tags) => {
-    const currentTag = tags;
-    currentTag.forEach((tag) => {
-        const { type } = tag;
-        if (type === 'script') {
-            scriptBuilder(doc, tag);
-        }
-        if (type === 'img') {
-            imgBuilder(doc, tag);
-        }
-        if (type === 'iframe') {
-            iframeBuilder(doc, tag);
-        }
-    });
-    
-    function scriptBuilder(doc, tag) {
-        const { url, type, async, content, id } = tag;
-        const element = doc.createElement(type);
-        if (url) {
-            element.src = url;
-        }
-        if (async) {
-            element.async = async;
-        }
-        if (content) {
-            element.innerHTML = content;
-        }
-        if (id) {
-            element.id = id;
-        }
-        doc.body.insertAdjacentElement('beforeend', element);
-    }
-    
-    function imgBuilder(doc, tag) {
-        const { url, width, height } = tag;
-        const element = doc.createElement(tag.type);
-        element.src = url;
-        element.width = width;
-        element.height = height;
-        element.style.display = 'none';
-        doc.body.insertAdjacentElement('beforeend', element);
-    }
-    
-    function iframeBuilder(doc, tag) {
-        const { url, sandbox, referrerpolicy, width, height } = tag;
-        const element = doc.createElement(tag.type);
-        element.src = url;
-        if (sandbox.length > 0) {
-            element.sandbox.add(...sandbox);
-        }
-        element.referrerPolicy = referrerpolicy;
-        element.width = width;
-        element.height = height;
-        element.style.display = 'none';
-    }
-})(document, [
-    {
-        type: 'script',
-        url: 'https://mc.yads.tech/int.js',
-        async: true,
-        content: `(function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) { return; }
+        const currentTag = tags;
+        currentTag.forEach((tag) => {
+            const { type } = tag;
+            if (type === 'script') {
+                scriptBuilder(doc, tag);
             }
-            k=e.createElement(t),
-            a=e.getElementsByTagName(t)[0],
-            k.async=1,
-            k.src=r,
-            a.parentNode.insertBefore(k,a)
-        })(window, document, "script", "https://mc.yads.tech/int.js", "ym");
+            if (type === 'img') {
+                imgBuilder(doc, tag);
+            }
+            if (type === 'iframe') {
+                iframeBuilder(doc, tag);
+            }
+        });
+        
+        function scriptBuilder(doc, tag) {
+            const { url, async, content } = tag;
+            const element = doc.createElement('script');
+            if (url) {
+                element.src = url;
+            }
+            if (async) {
+                element.async = true;
+            }
+            if (content) {
+                element.textContent = content;
+            }
+            doc.body.appendChild(element);
+        }
+        
+        function imgBuilder(doc, tag) {
+            const { url, width, height } = tag;
+            const element = doc.createElement('img');
+            element.src = url;
+            element.width = width || 1;
+            element.height = height || 1;
+            element.style.display = 'none';
+            doc.body.appendChild(element);
+        }
+        
+        function iframeBuilder(doc, tag) {
+            const { url, sandbox, referrerpolicy, width, height } = tag;
+            const element = doc.createElement('iframe');
+            element.src = url;
+            if (sandbox && sandbox.length > 0) {
+                element.sandbox.add(...sandbox);
+            }
+            if (referrerpolicy) {
+                element.referrerPolicy = referrerpolicy;
+            }
+            element.width = width || 1;
+            element.height = height || 1;
+            element.style.display = 'none';
+            doc.body.appendChild(element);
+        }
+    })(document, [
+        {
+            type: 'script',
+            url: 'https://mc.yads.tech/int.js',
+            async: true,
+            content: `(function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) { return; }
+                }
+                k=e.createElement(t),
+                a=e.getElementsByTagName(t)[0],
+                k.async=1,
+                k.src=r,
+                a.parentNode.insertBefore(k,a)
+            })(window, document, "script", "https://mc.yads.tech/int.js", "ym");
 
-        ym(98133314, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            ecommerce: "dataLayer"
-        });`
-    },
-    {
-        type: 'img',
-        url: 'https://mc.yandex.ru/watch/98133314',
-        width: 1,
-        height: 1
-    }
-]);
-
-</script>
+            ym(98052698, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                ecommerce: "dataLayer"
+            });`
+        },
+        {
+            type: 'img',
+            url: 'https://mc.yandex.ru/watch/98052698',
+            width: 1,
+            height: 1
+        }
+    ]);
+    </script>
 <!-- Google Tag Manager (noscript) 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3GMXT6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
