@@ -1,124 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="ecommerce.css">
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M3GMXT6');</script>
-<!-- End Google Tag Manager -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовая страница</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
 
-<script src="main.js" defer></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-</script>
-    <meta name="yandex-verification" content="b4953e568907edf4"></meta>
-  </head>
+    header, main, footer {
+      padding: 40px;
+      text-align: center;
+    }
+
+    header {
+      background-color: #e3e3ff;
+    }
+
+    main {
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: #dff0d8;
+    }
+
+    .btn {
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .btn-1 {
+      background-color: #ff6b6b;
+    }
+
+    .btn-2 {
+      background-color: #4ecdc4;
+    }
+
+    .btn-3 {
+      background-color: #1a535c;
+    }
+  </style>
+</head>
 <body>
-  <script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
- 'user_info': [{
- 'email': 'bamblbeeprime@gmail.com',
- 'name': "1123123123ss",
- 'lastname': 'Serik'
- }]
-});
-</script>
-<script> 
-    gtag("event", "view_item", {
-currency: "TEST",
-items: [
-{
-item_id: "SKU_12345",
-item_name: "Детская кровать - тахта",
-item_category: "Кровати и матрасы",
-price: 99990.00,
-quantity: 1
-}
-]
-});
 
-
-</script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3GMXT6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
-<!-- Start of header element with cart and logo -->      
-  <header class="header">
-    <button class="logo" onclick="JavaScript:alert('Logo')">
-    <img width="80" height="40" src="logo.png" alt="logo">
-    </button>
-    <button class="cart">
-    <img width="60" height="50" src="cart.png" alt="cart">
-    </button>
+  <!-- Первый блок -->
+  <header>
+    <h1>Добро пожаловать!</h1>
+    <button id="btn-1" class="btn btn-1" onclick="pushEvent('event_click_1')">Нажми сюда</button>
   </header>
-<!-- End of header element with cart and logo -->      
 
-<!-- Start of pop up element -->      
-  <div class="popup">
-    <p id="popup-content"></p>
-    <span class="close-btn">&times;</span>
-    <h2>Cart</h2>
-    <p>Your cart is empty</p>
-    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
-  </div>
-<!-- End of pop up element -->   
-  
-  <div id="popup-purchase" class="popup-purchase">
-        <h3>Thank you for your purchase</h3>
-        <button onclick="closePopup()">Close</button>
-    </div>
-  
-<!-- Start of product grid -->    
-<div class="product-container">
-    
-  <div class="product">
-    <img class="product-img" src="placeholder.png" alt="Product 1">
-    <h2>Product 1</h2>
-    <p>Price: $19.99</p>
-    <p>Product id: 111111</p>
-    <button class="view-btn" onclick="window.location.href='product_1.html';">View</button>
-    <button class="add-cart-btn">Add to cart</button>
-    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
-  </div>
-  
-  <div class="product">
-    <img class="product-img" src="placeholder.png" alt="Product 2">
-    <h2>Product 2</h2>
-    <p>Price: $29.99</p>    
-    <p>Product id: 111112</p>
-    <button class="view-btn" onclick="window.location.href='product_2.html';">View</button>
-    <button class="add-cart-btn">Add to cart</button>
-    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
-  </div>
-  
-  <div class="product">
-    <img class="product-img" src="placeholder.png" alt="Product 3">
-    <h2>Product 3</h2>
-    <p>Price: $39.99</p>
-    <p>Product id: 111113</p>
-    <button class="view-btn" onclick="window.location.href='product_3.html';">View</button>
-    <button class="add-cart-btn">Add to cart</button>
-    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
-  </div>
-  <div class="product">
-    <img class="product-img" src="placeholder.png" alt="Product 4">
-    <h2>Product 4</h2>
-    <p>Price: $49.99</p>
-    <p>Product id: 111114</p>
-    <button class="view-btn" onclick="window.location.href='product_4.html';">View</button>
-    <button class="add-cart-btn">Add to cart</button>
-    <button onclick="openPopup()" class="purchase-btn">Purchase</button>
-  </div>
-</div>
-<!-- End of product grid -->    
-  
+  <!-- Второй блок -->
+  <main>
+    <h2>Тестовый блок</h2>
+    <button id="btn-2" class="btn btn-2" onclick="pushEvent('event_click_2')">А теперь сюда</button>
+  </main>
+
+  <!-- Третий блок -->
+  <footer>
+    <h3>Футер страницы</h3>
+    <button id="btn-3" class="btn btn-3" onclick="pushEvent('event_click_3')">Нажми меня</button>
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function pushEvent(eventName) {
+      dataLayer.push({ 'event': eventName });
+      console.log('Pushed to dataLayer:', eventName);
+    }
+  </script>
+
 </body>
 </html>
